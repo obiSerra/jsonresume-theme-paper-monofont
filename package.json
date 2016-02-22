@@ -1,17 +1,17 @@
 {
-  "name": "jsonresume-theme-paper",
-  "version": "0.3.2",
-  "description": "A theme for JSON Resume",
-  "author": "Tim Daubenschütz",
+  "name": "jsonresume-theme-paper-monofont",
+  "version": "0.1.0",
+  "description": "A theme for JSON Resume based on Paper Theme by Tim Daubenschütz",
+  "author": "Roberto Serra",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TimDaub/jsonresume-theme-paper"
+    "url": "https://github.com/obiSerra/jsonresume-theme-paper-monofont.git"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4"
   },
-  "homepage": "https://github.com/TimDaub/jsonresume-theme-paper",
+  "homepage": "https://github.com/obiSerra/jsonresume-theme-paper-monofont.git",
   "main": "index.js",
   "scripts": {
     "start": "resume serve"
