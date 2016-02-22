@@ -4,6 +4,10 @@ body, html {
   padding-top: 1.5em;
 }
 
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  color: #000;
+}
+
 .paper {
   width:100%;
   border: 0;
@@ -23,13 +27,24 @@ header p {
   float:left;
 }
 
-.profiles {
-  display:none;
+.profiles-url {
+  display: inline-block;
+}
+
+.profiles-listing ul li {
+    display: block;
+    margin-top: 10px;
+}
+.profiles-listing ul li a{
+  font-weight: bold;
+}
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
 }
 
 .content {
-  page-break-inside:avoid; 
-  page-break-after:auto;
+  padding-top: 10px;
 }
 
 .header-text {

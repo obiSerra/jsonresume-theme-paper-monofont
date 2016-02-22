@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 	<head>
-	
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
+
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	
+
 
 	<style>
 	{{{css}}}
@@ -17,10 +17,9 @@
 	<style media="print">
 	{{{print}}}
 	</style>
-	
+
 	</head>
 	<body>
-
 		<div class="resume-wrapper">
 		  <article class="paper">
 		  	{{#resume.basics}}
@@ -40,7 +39,7 @@
 			      </div>
 			    </header>
 			    <div class="content-wrapper">
-			    
+
 			      <!-- CONTACT -->
 			      <section class="content">
 			        <div class="row">
@@ -112,7 +111,7 @@
 		      	{{/location}}
 		      {{/resume.basics}}
 
-						
+
 						<!-- LANGUAGE -->
 			      {{#if resume.languages.length}}
 			      <section class="content">
@@ -124,14 +123,14 @@
 
 			          	{{#each resume.languages}}
 				            <ul>
-											
+
 											{{#if language}}
 				              	<li>{{language}}</li>
-											{{/if}}	
+											{{/if}}
 
 											{{#if fluency}}
 				              <li>{{fluency}}</li>
-											{{/if}}	
+											{{/if}}
 
 				            </ul>
 			            {{/each}}
@@ -154,9 +153,8 @@
 					            {{#each profiles}}
 					            	{{#if network}}
 					              	<li>
-					              	<a href="{{url}}" target="_blank">
-							                	{{network}}
-							                </a>
+					              	<a href="{{url}}" target="_blank">{{network}}</a>
+													<span class="profiles-url">{{url}}</span>
 							            </li>
 					              {{/if}}
 					            {{/each}}
@@ -179,10 +177,12 @@
 			          	{{#if $first}}
 											Work	Experience
 			          	{{/if}}
-			          
+
 								 {{#if startDate}}
 										{{#if endDate}}
-			            		<p>{{startDate}} till {{endDate}}</p>
+			            		<p>{{startDate}}</p>
+
+											<p>{{endDate}}</p>
 			            	{{/if}}
 									{{/if}}
 
@@ -212,7 +212,7 @@
 											{{/each}}
 										{{/if}}
 
-									
+
 			          </div>
 			        </div>
 			      </section>
@@ -227,16 +227,18 @@
 				          {{#if organization}}
 				          	{{organization}}
 				          {{/if}}
-				          
-									{{#if startDate}}
-											{{#if endDate}}
-				            		<p>{{startDate}} till {{endDate}}</p>
-				            	{{/if}}
-										{{/if}}
 
-				          </div>
+									{{#if startDate}}
+			            		<p>{{startDate}}</p>
+
+											{{/if}}
+										{{#if endDate}}
+											<p>{{endDate}}</p>
+			            	{{/if}}
+
+									</div>
 				          <div class="content-text work-listing">
-										
+
 										{{#if summary}}
 					            <p>
 					            	{{summary}}
@@ -253,7 +255,7 @@
 				      </section>
 			      {{/each}}
 					{{/if}}
-					
+
 
 					{{#if resume.education.length}}
 						{{#foreach resume.education}}
@@ -270,10 +272,12 @@
 										{{/if}}
 
 										{{#if startDate}}
+				            		<p>{{startDate}}</p>
+
+												{{/if}}
 											{{#if endDate}}
-				            		<p>{{startDate}} till {{endDate}}</p>
+												<p>{{endDate}}</p>
 				            	{{/if}}
-										{{/if}}
 
 				          </div>
 				          <div class="content-text work-listing education-listing">
@@ -284,16 +288,13 @@
 						            <p class="heading">{{institution}}</p>
 						          {{/if}}
 										{{/if}}
-
 										{{#if area}}
-											{{#if gpa}}
 				            		<p class="highlight">
 				            		{{#if studyType}}
 													{{studyType}}:
 				            		{{/if}}
-				            		<i>{{area}} ({{gpa}})</i>
+				            		<i>{{area}}</i>
 				            		</p>
-				            	{{/if}}
 										{{/if}}
 
 				          </div>
@@ -394,9 +395,9 @@
 		    	{{/if}}
 
 		    </div>
-		      
+
 		  </article>
-		  
+
 		</div>
 	</body>
 </html>
